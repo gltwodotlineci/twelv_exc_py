@@ -1,5 +1,8 @@
 def log_decorator(func):
-     pass
+    def inner():
+        print("This comes from decorator")
+        func()
+    return inner
  
 @log_decorator
 def function_test():
