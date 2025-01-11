@@ -1,6 +1,6 @@
 import uuid
 
-def refacto_search_book(list_books, book_title)
+def refacto_search_book(list_books, book_title):
     for book in list_books:
         if book.title == book_title:
             return book
@@ -13,9 +13,9 @@ class Book:
         self.year = year
 
 class Library:
-    def __init__(self):
-        self.books = []
-        self.borrowed_books = []
+    def __init__(self, books=[], borrowed_books=[]):
+        self.books = books
+        self.borrowed_books = borrowed_books
     
     def add_book(self, book):
         self.books.append(book)
@@ -41,5 +41,11 @@ class Library:
 
         print(borrowed)
 
-book = Book(title="The mist", author="Shekspare", year=2004)
-print(book.__dict__)
+book1 = Book(title="The mist", author="Shekspare", year=2000)
+book2 = Book(title="The mist 2", author="Shekspare", year=2002)
+book3 = Book(title="The Sun", author="Balzak", year=2003)
+book4 = Book(title="I'm a false philosophe", author="Finkelcraut", year=1950)
+library = Library()
+library.add_book(book1)
+library.add_book(book2)
+print(library.__dict__)
