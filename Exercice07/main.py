@@ -14,4 +14,6 @@ def square():
             print("Le paramètre doit être un nombre !")
             return None
 
-print(f"The square number of your parameter is: {square()}")
+square_result = square()
+if square_result is not None:
+    print(f"The square number of your parameter is: {square_result}")
