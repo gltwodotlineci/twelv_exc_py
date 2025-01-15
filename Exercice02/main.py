@@ -17,7 +17,7 @@ students = {
 }
 
 name = input("Entrez le nom de l'étudiant : ")
-if name not in  students.keys():
+if name not in  students:
      print(f" L'étudiant {name} n'existe pas dans la liste.")
 else:
      student = students[name]
@@ -27,4 +27,4 @@ else:
           print(f"{k} : {note}")
           total += note
 
-     print(f"Moyenne de {name} : {float(total)/3}")
+     print(f"Moyenne de {name} : {float(total)/len(student)}")

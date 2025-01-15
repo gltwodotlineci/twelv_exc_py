@@ -10,7 +10,7 @@ class Rectangle:
 
     # Perimeter method
     def calculate_perimeter(self):
-        return 2* (self.width + self.length)
+        return 2 * (self.width + self.length)
 
 
 rectangle = Rectangle(5, 3) # 5:width & 3:length

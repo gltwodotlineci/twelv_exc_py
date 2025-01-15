@@ -2,6 +2,7 @@ def log_decorator(func):
     def inner():
         print("This comes from decorator")
         func()
+        print("This comes after the fonction")
     return inner
  
 @log_decorator
