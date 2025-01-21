@@ -6,7 +6,7 @@ def refacto_search_book(list_books, book_title):
             return book
 
 def refacto_error(books, book_title):
-    if books.get(book_title) is None:
+    if book_title not in books:
         raise ValueError("Wrong title, please try again!")
 
 
